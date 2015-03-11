@@ -101,6 +101,8 @@ echo -e "\nInstalled versions:"
 ) | sed -u "s/^/  /"
 
 echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+chown root:root /usr/bin/sudo
+chmod 4755 /usr/bin/sudo
 
 echo -e "\nSuccess!"
 exit 0
