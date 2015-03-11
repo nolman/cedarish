@@ -50,6 +50,7 @@ apt-get install -y --force-yes \
     python-dev \
     ruby \
     ruby-dev \
+    sudo \
     socat \
     syslinux \
     tar \
@@ -98,6 +99,8 @@ echo -e "\nInstalled versions:"
   gem -v
   python -V
 ) | sed -u "s/^/  /"
+
+echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 echo -e "\nSuccess!"
 exit 0
